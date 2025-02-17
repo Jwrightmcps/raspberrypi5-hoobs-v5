@@ -38,12 +38,12 @@ chmod +x disable-hoobs-fullscreen.sh
 chmod +x enable-hoobs-fullscreen.sh
 
 if grep -Fxq "[idle]" ~/.config/wayfire.ini; then
-  sed -i 's/dpms_timeout=600/dpms_timeout=180/' ~/.config/wayfire.ini
+  sed -i 's/dpms_timeout=600/dpms_timeout=300/' ~/.config/wayfire.ini
   sed  '/\[idle\]/a disable_on_fullscreen = false' ~/.config/wayfire.ini
 else
 printf "%s\n" "[idle]" >> ~/.config/wayfire.ini
 printf "%s\n" "disable_on_fullscreen = false" >> ~/.config/wayfire.ini
-printf "%s\n" "dpms_timeout=180" >> ~/.config/wayfire.ini
+printf "%s\n" "dpms_timeout=300" >> ~/.config/wayfire.ini
 fi
 
 rm config.yaml
