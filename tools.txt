@@ -3,3 +3,19 @@ https://downloads.raspberrypi.com/raspios_arm64/images/raspios_arm64-2024-10-28/
 https://downloads.raspberrypi.org/imager/imager_latest.dmg
 sudo apt install rpi-imager
 
+# change 1 System Options>S5 Boot / Auto Login Select boot into desktop or to command line>B4 Desktop Autologon Desktop GUI, automatically logged in as 'hoobs' user
+# change 1 System Options>S6 Splash Screen>No
+# change 2 Display Options>D6 Onscreen Keyboard Enable on-screen keyboard>S1 Always On On-screen keyboard always enabled
+# change 6 Advanced Options> A4 Boot Order> B2 NVMe/USB boot
+# change 6 Advanced Options> A5 bootloader Version> Latest>Yes
+# change 6 Advanced Options> A6 Wayland>W2 Wayfire window manager with Wayland backend
+# change 6 Advanced Options> A8 PCIe Speed>Yes
+
+# Appearance Settings>Defaults>For large screens>Set Defaults
+# Appearance Settings>System>Theme>Dark
+# Appearance Settings>Desktop>Layout>No Image
+# Appearance Settings>Desktop>Layout>Colour>Black
+# Appearance Settings>Desktop>Layout>Colour>Black
+# Appearance Settings>Desktop>Layout>Documents>Disable
+# Appearance Settings>Desktop>Layout>Wastebasket>Disable
+# Appearance Settings>Desktop>Layout>External Disks>Disable

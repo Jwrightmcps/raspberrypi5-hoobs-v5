@@ -4,6 +4,7 @@
 sudo apt update && sudo apt upgrade -y
 sudo rpi-eeprom-update
 sudo raspi-config
+sudo apt update && sudo apt upgrade -y
 
 echo # change 1 System Options>S5 Boot / Auto Login Select boot into desktop or to command line>B4 Desktop Autologon Desktop GUI, automatically logged in as 'hoobs' user
 echo # change 1 System Options>S6 Splash Screen>No
@@ -34,7 +35,7 @@ sudo cp ~/hideaway/build/hideaway /usr/bin
 sudo chmod +x /usr/bin/hideaway
 cd ~
 wget https://raw.githubusercontent.com/ugotapi/wayland-pagepi/main/config.yaml
-#sudo nano ~/config.yaml
+sed -i 's/hideaway 4/hideaway 5/' ~/config.yaml
 sudo cp ~/config.yaml /etc/interception/udevmon.d/config.yaml
 sudo nano /etc/interception/udevmon.d/config.yaml
 sudo systemctl restart udevmon
@@ -44,6 +45,8 @@ sudo apt install hoobsd hoobs-cli -y
 sudo hbs install
 
 wget https://raw.githubusercontent.com/Jwrightmcps/raspberrypi5-hoobs-v5/refs/heads/main/hoobs-ui.desktop
+wget https://raw.githubusercontent.com/Jwrightmcps/raspberrypi5-hoobs-v5/refs/heads/main/disable-hoobs.kiosk.sh
+wget https://raw.githubusercontent.com/Jwrightmcps/raspberrypi5-hoobs-v5/refs/heads/main/enable-hoobs-kiosk.sh
 mkdir ~/.config/autostart
 cp ~/hoobs-ui.desktop ~/.config/autostart/hoobs-ui.desktop
-nano ~/.config/autostart/hoobs-ui.desktop
+
