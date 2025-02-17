@@ -1,5 +1,6 @@
 #!/bin/bash
 # Custom setup for RaspberryPi 5 Hoobs Server with Desktop support
+# wget https://raw.githubusercontent.com/Jwrightmcps/raspberrypi5-hoobs-v5/refs/heads/main/setup-hoobs-for-raspi-5.sh && chmod +x setup-hoobs-for-raspi-5.sh && ./setup-hoobs-for-raspi-5.sh
 
 sudo apt update && sudo apt upgrade -y
 sudo rpi-eeprom-update
