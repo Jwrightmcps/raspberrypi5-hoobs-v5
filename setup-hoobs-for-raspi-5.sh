@@ -23,12 +23,9 @@ wget -qO- https://dl.hoobs.org/stable | sudo bash -
 sudo apt install hoobsd hoobs-cli -y
 sudo hbs install
 
-if [-e ~/.config/autostart] ; then
- echo autostart directory exists already!
-else
-  mkdir ~/.config/autostart
+if [ ! -d ~/.config/autostart ]; then
+mkdir ~/.config/autostart
 fi
-
 wget https://raw.githubusercontent.com/Jwrightmcps/raspberrypi5-hoobs-v5/refs/heads/main/hoobs-ui.desktop -O ~/.config/autostart
 wget https://raw.githubusercontent.com/Jwrightmcps/raspberrypi5-hoobs-v5/refs/heads/main/disable-hoobs-kiosk.sh
 wget https://raw.githubusercontent.com/Jwrightmcps/raspberrypi5-hoobs-v5/refs/heads/main/enable-hoobs-kiosk.sh
@@ -37,6 +34,5 @@ chmod +x disable-hoobs-kiosk.sh
 chmod +x enable-hoobs-kiosk.sh
 
 rm config.yaml
-rm hoobs-ui.desktop
 rm setup-hoobs-for-raspi-5.sh
 sudo raspi-config
