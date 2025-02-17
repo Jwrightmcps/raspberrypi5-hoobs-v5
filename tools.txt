@@ -19,3 +19,5 @@ sudo apt install rpi-imager
 # Appearance Settings>Desktop>Layout>Documents>Disable
 # Appearance Settings>Desktop>Layout>Wastebasket>Disable
 # Appearance Settings>Desktop>Layout>External Disks>Disable
+
+# Configure clock (%I%M%p)
