@@ -43,7 +43,7 @@ wget -qO- https://dl.hoobs.org/stable | sudo bash -
 sudo apt install hoobsd hoobs-cli -y
 sudo hbs install
 
-wget https://raw.github.com/Jwrightmcps/raspberrypi5-hoobs-v5/hoobs-ui.desktop
+wget https://raw.githubusercontent.com/Jwrightmcps/raspberrypi5-hoobs-v5/refs/heads/main/hoobs-ui.desktop
 mkdir ~/.config/autostart
 cp ~/hoobs-ui.desktop ~/.config/autostart/hoobs-ui.desktop
 nano ~/.config/autostart/hoobs-ui.desktop
