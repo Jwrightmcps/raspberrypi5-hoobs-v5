@@ -36,8 +36,15 @@ chmod +x disable-hoobs-kiosk.sh
 chmod +x enable-hoobs-kiosk.sh
 chmod +x disable-hoobs-fullscreen.sh
 chmod +x enable-hoobs-fullscreen.sh
-sudo sed  '/\[idle\]/a disable_on_fullscreen = false' ~/.config/wayfire.ini
-sudo sed -i 's/dpms_timeout=600/dpms_timeout=180/' ~/.config/wayfire.ini
+
+if grep -Fxq "[idle]" ~/.config/wayfire.ini; then
+  sed -i 's/dpms_timeout=600/dpms_timeout=180/' ~/.config/wayfire.ini
+  sed  '/\[idle\]/a disable_on_fullscreen = false' ~/.config/wayfire.ini
+else
+printf "%s\n" "[idle]" >> ~/.config/wayfire.ini
+printf "%s\n" "disable_on_fullscreen = false" ~/.config/wayfire.ini
+printf "%s\n" "dpms_timeout=180" >> ~/.config/wayfire.ini
+fi
 
 rm config.yaml
 rm setup-hoobs-for-raspi-5.sh
