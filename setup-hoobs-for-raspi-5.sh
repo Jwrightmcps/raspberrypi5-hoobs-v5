@@ -3,7 +3,6 @@
 
 sudo apt update && sudo apt upgrade -y
 sudo rpi-eeprom-update
-sudo raspi-config
 sudo apt update && sudo apt upgrade -y
 
 sudo apt install -y interception-tools interception-tools-compat cmake
@@ -18,7 +17,6 @@ cd ~
 wget https://raw.githubusercontent.com/ugotapi/wayland-pagepi/main/config.yaml
 sed -i 's/hideaway 4/hideaway 5/' ~/config.yaml
 sudo cp ~/config.yaml /etc/interception/udevmon.d/config.yaml
-sudo nano /etc/interception/udevmon.d/config.yaml
 sudo systemctl restart udevmon
 
 wget -qO- https://dl.hoobs.org/stable | sudo bash -
@@ -33,3 +31,6 @@ chmod +x disable-hoobs-kiosk.sh
 chmod +x enable-hoobs-kiosk.sh
 mkdir ~/.config/autostart
 cp ~/hoobs-ui.desktop ~/.config/autostart/hoobs-ui.desktop
+rm config.yaml
+rm setup-hoobs-for-raspi-5.sh
+sudo raspi-config
