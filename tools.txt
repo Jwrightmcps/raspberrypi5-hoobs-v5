@@ -1,0 +1,5 @@
+#Download Raspberry Pi tools and OS image used to setup the system
+https://downloads.raspberrypi.com/raspios_arm64/images/raspios_arm64-2024-10-28/2024-10-22-raspios-bookworm-arm64.img.xz
+https://downloads.raspberrypi.org/imager/imager_latest.dmg
+sudo apt install rpi-imager
+
