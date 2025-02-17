@@ -21,7 +21,7 @@ sudo systemctl restart udevmon
 
 wget -qO- https://dl.hoobs.org/stable | sudo bash -
 sudo apt install hoobsd hoobs-cli -y
-sudo hbs install
+sudo hbs install -p 80
 
 if [ ! -d ~/.config/autostart ]; then
 mkdir ~/.config/autostart
