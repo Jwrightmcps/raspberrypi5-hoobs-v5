@@ -42,7 +42,7 @@ if grep -Fxq "[idle]" ~/.config/wayfire.ini; then
   sed  '/\[idle\]/a disable_on_fullscreen = false' ~/.config/wayfire.ini
 else
 printf "%s\n" "[idle]" >> ~/.config/wayfire.ini
-printf "%s\n" "disable_on_fullscreen = false" ~/.config/wayfire.ini
+printf "%s\n" "disable_on_fullscreen = false" >> ~/.config/wayfire.ini
 printf "%s\n" "dpms_timeout=180" >> ~/.config/wayfire.ini
 fi
 
