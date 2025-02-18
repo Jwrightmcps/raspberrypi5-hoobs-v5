@@ -1,6 +1,7 @@
 #Download Raspberry Pi tools and OS image used to setup the system
 https://downloads.raspberrypi.com/raspios_arm64/images/raspios_arm64-2024-10-28/2024-10-22-raspios-bookworm-arm64.img.xz
 https://downloads.raspberrypi.org/imager/imager_latest.dmg
+https://chromewebstore.google.com/detail/screen-virtual-keyboard-s/gkiknnlmdgcmhmncldcmmnhhdiakielc?hl=en
 sudo apt install rpi-imager
 
 # change 1 System Options>S5 Boot / Auto Login Select boot into desktop or to command line>B4 Desktop Autologon Desktop GUI, automatically logged in as 'hoobs' user
