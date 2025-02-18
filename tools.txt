@@ -21,3 +21,5 @@ sudo apt install rpi-imager
 # Appearance Settings>Desktop>Layout>External Disks>Disable
 
 # Configure clock (%I%M%p)
+
+https://www.raspberrypi.com/documentation/computers/configuration.html#advanced-options
