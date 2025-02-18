@@ -46,6 +46,9 @@ sudo hbs install -p 80
 if [ ! -d ~/.config/autostart ]; then
 mkdir ~/.config/autostart
 fi
+
+wget https://github.com/Jwrightmcps/raspberrypi5-hoobs-v5/raw/refs/heads/main/on-screen-keyboard-ext-black.tar.gz
+wget https://github.com/Jwrightmcps/raspberrypi5-hoobs-v5/raw/refs/heads/main/on-screen-keyboard-ext-white.tar.gz
 wget https://raw.githubusercontent.com/Jwrightmcps/raspberrypi5-hoobs-v5/refs/heads/main/hoobs-ui.desktop -O ~/.config/autostart/hoobs-ui.desktop
 wget https://raw.githubusercontent.com/Jwrightmcps/raspberrypi5-hoobs-v5/refs/heads/main/disable-hoobs-kiosk.sh
 wget https://raw.githubusercontent.com/Jwrightmcps/raspberrypi5-hoobs-v5/refs/heads/main/enable-hoobs-kiosk.sh
@@ -56,6 +59,7 @@ chmod +x disable-hoobs-kiosk.sh
 chmod +x enable-hoobs-kiosk.sh
 #chmod +x disable-hoobs-fullscreen.sh
 #chmod +x enable-hoobs-fullscreen.sh
+tar -xf on-screen-keyboard-ext-white.tar.gz
 
 if grep -Fxq "[idle]" ~/.config/wayfire.ini; then
   sed -i 's/dpms_timeout=600/dpms_timeout=180/' ~/.config/wayfire.ini
