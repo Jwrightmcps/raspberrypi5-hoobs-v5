@@ -5,6 +5,27 @@
 sudo apt update && sudo apt upgrade -y
 sudo rpi-eeprom-update
 
+# Get the Raspberry Pi Board Type (4 = pi4, 5 = pi5, etc.)
+sudo raspi-config nonint get_pi_type 
+# Set Boot to GUI and Autologon
+sudo raspi-config nonint do_boot_behaviour B4
+# Set hostname to hoobs
+sudo raspi-config nonint do_hostname hoobs
+# Set SSH to enabled
+sudo raspi-config nonint do_ssh 0
+# Set sceen blanking to enabled
+sudo raspi-config nonint do_blanking 0
+# Set On-screen keyboard to always show
+sudo raspi-config nonint do_squeekboard S1
+# Set PCIe 3 to enabled
+sudo raspi-config nonint do_pci 0
+# Set Wayland
+sudo raspi-config nonint do_wayland W2
+# Set to use latest boot loader
+sudo raspi-config nonint do_boot_rom E1
+# Update the keyboard
+sudo raspi-config nonint update_wayfire_keyboard
+
 sudo apt install -y interception-tools interception-tools-compat cmake
 cd ~
 git clone https://gitlab.com/interception/linux/plugins/hideaway.git
@@ -48,4 +69,7 @@ fi
 rm config.yaml
 rm setup-hoobs-for-raspi-5.sh
 rm -rf ~/hideaway/
-sudo raspi-config
+
+# Apply settings
+sudo raspi-config nonint do_finish
+#sudo raspi-config
