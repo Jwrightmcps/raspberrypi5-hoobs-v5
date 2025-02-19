@@ -1,7 +1,8 @@
 #!/bin/bash
 # Custom setup for RaspberryPi 5 Hoobs Server with Desktop support
  #wget https://raw.githubusercontent.com/Jwrightmcps/raspberrypi5-hoobs-v5/refs/heads/main/setup-hoobs-for-raspi-5.sh && chmod +x setup-hoobs-for-raspi-5.sh && ./setup-hoobs-for-raspi-5.sh 2>&1 | tee setup-hoobs-for-raspi-5.log
-
+# Start in user's home directory
+cd ~
 # Set the locale to en-US if not already set
 if [ "$(grep LANG=en_US /etc/default/locale)" = "LANG=en_US" ];then
 	exit 0
@@ -72,6 +73,7 @@ if [ ! -d ~/.config/pcmanfm/LXDE-pi ]; then
 mkdir ~/.config/pcmanfm/LXDE-pi
 fi
 # Get supporting files
+wget https://github.com/Jwrightmcps/raspberrypi5-hoobs-v5/raw/refs/heads/main/hoobs-theme.tar.gz
 wget https://github.com/Jwrightmcps/raspberrypi5-hoobs-v5/raw/refs/heads/main/on-screen-keyboard-ext.tar.gz
 wget https://raw.githubusercontent.com/Jwrightmcps/raspberrypi5-hoobs-v5/refs/heads/main/hoobs-ui.desktop -O ~/.config/autostart/hoobs-ui.desktop
 wget https://raw.githubusercontent.com/Jwrightmcps/raspberrypi5-hoobs-v5/refs/heads/main/wf-panel-pi.ini -O ~/.config/wf-panel-pi.ini
@@ -79,14 +81,15 @@ wget https://raw.githubusercontent.com/Jwrightmcps/raspberrypi5-hoobs-v5/refs/he
 sudo wget https://raw.githubusercontent.com/Jwrightmcps/raspberrypi5-hoobs-v5/refs/heads/main/wayland-browser -O /usr/bin/wayland-browser
 sudo wget https://raw.githubusercontent.com/Jwrightmcps/raspberrypi5-hoobs-v5/refs/heads/main/enable-hoobs-kiosk -O /usr/bin/enable-hoobs-kiosk
 sudo wget https://raw.githubusercontent.com/Jwrightmcps/raspberrypi5-hoobs-v5/refs/heads/main/disable-hoobs-kiosk -O /usr/bin/disable-hoobs-kiosk
-sudo wget https://github.com/Jwrightmcps/raspberrypi5-hoobs-v5/blob/main/hoobs.png -O /usr/share/rpd-wallpaper/hoobs.png
-sudo mv /usr/share/plymouth/themes/pix/splash.png /usr/share/plymouth/themes/pix/splash.png.default
-sudo wget https://github.com/Jwrightmcps/raspberrypi5-hoobs-v5/blob/main/splash.png -O /usr/share/plymouth/themes/pix/splash.png
-sudo plymouth-set-default-theme --rebuild-initrd pix
 sudo chmod +x /usr/bin/wayland-browser
 sudo chmod +x /usr/bin/enable-hoobs-kiosk
 sudo chmod +x /usr/bin/disable-hoobs-kiosk
+tar -xf hoobs-theme.tar.gz
 tar -xf on-screen-keyboard-ext.tar.gz
+sudo mv /usr/share/plymouth/themes/pix/splash.png /usr/share/plymouth/themes/pix/splash.png.default
+sudo mv splash.png /usr/share/plymouth/themes/pix/splash.png
+sudo mv hoobs.png /usr/share/rpd-wallpaper/hoobs.png
+sudo plymouth-set-default-theme -R pix
 mv gkiknnlmdgcmhmncldcmmnhhdiakielc .gkiknnlmdgcmhmncldcmmnhhdiakielc
 # Fix-up for screen blanking
 if grep -Fxq "[idle]" ~/.config/wayfire.ini; then
@@ -101,6 +104,7 @@ fi
 rm config.yaml
 rm setup-hoobs-for-raspi-5.sh
 rm on-screen-keyboard-ext.tar.gz
+rm hoobs-theme.tar.gz
 rm -rf ~/hideaway/
 # Apply raspi settings
 sudo raspi-config nonint do_finish
