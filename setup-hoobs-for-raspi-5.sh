@@ -81,4 +81,4 @@ rm -rf ~/hideaway/
 
 # Apply settings
 sudo raspi-config nonint do_finish
-printf "%s\n" "Please reboot system for call changes to take effect"
+printf "%s\n" "Please reboot system for all changes to take effect"
