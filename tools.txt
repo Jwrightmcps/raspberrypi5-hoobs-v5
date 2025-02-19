@@ -25,5 +25,8 @@ sudo apt install rpi-imager
 
 Exec=chromium-browser --wayland-text-input-version=3 --enable-wayland-ime --enable-virtual-keyboard --load-extension=~/gkiknnlmdgcmhmncldcmmnhhdiakielc/1.2.9.8_0/ http://www.google.com/
 
-
 https://www.raspberrypi.com/documentation/computers/configuration.html#advanced-options
+
+Configuration - Raspberry Pi Documentation
+The official documentation for Raspberry Pi computers and microcontrollers.
+https://www.raspberrypi.com/documentation/computers/configuration.html
