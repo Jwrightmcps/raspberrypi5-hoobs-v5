@@ -47,8 +47,18 @@ if [ ! -d ~/.config/autostart ]; then
 mkdir ~/.config/autostart
 fi
 
-wget https://github.com/Jwrightmcps/raspberrypi5-hoobs-v5/raw/refs/heads/main/on-screen-keyboard-ext.tar.gz
+if [ ! -d ~/.config/pcmanfm ]; then
+mkdir ~/.config/pcmanfm
+fi
+
+if [ ! -d ~/.config/pcmanfm/LXDE-pi ]; then
+mkdir ~/.config/pcmanfm/LXDE-pi
+fi
+
 wget https://raw.githubusercontent.com/Jwrightmcps/raspberrypi5-hoobs-v5/refs/heads/main/hoobs-ui.desktop -O ~/.config/autostart/hoobs-ui.desktop
+wget https://raw.githubusercontent.com/Jwrightmcps/raspberrypi5-hoobs-v5/refs/heads/main/wf-panel-pi.ini -O ~/.config/wf-panel-pi.ini
+wget https://raw.githubusercontent.com/Jwrightmcps/raspberrypi5-hoobs-v5/refs/heads/main/desktop-items-HDMI-A-1.conf -O ~/.config/pcmanfm/LXDE-pi/desktop-items-HDMI-A-1.conf
+wget https://github.com/Jwrightmcps/raspberrypi5-hoobs-v5/raw/refs/heads/main/on-screen-keyboard-ext.tar.gz
 wget https://raw.githubusercontent.com/Jwrightmcps/raspberrypi5-hoobs-v5/refs/heads/main/disable-hoobs-kiosk.sh
 wget https://raw.githubusercontent.com/Jwrightmcps/raspberrypi5-hoobs-v5/refs/heads/main/enable-hoobs-kiosk.sh
 chmod +x disable-hoobs-kiosk.sh
