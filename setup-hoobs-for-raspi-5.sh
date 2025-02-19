@@ -61,8 +61,10 @@ wget https://raw.githubusercontent.com/Jwrightmcps/raspberrypi5-hoobs-v5/refs/he
 wget https://github.com/Jwrightmcps/raspberrypi5-hoobs-v5/raw/refs/heads/main/on-screen-keyboard-ext.tar.gz
 wget https://raw.githubusercontent.com/Jwrightmcps/raspberrypi5-hoobs-v5/refs/heads/main/disable-hoobs-kiosk.sh
 wget https://raw.githubusercontent.com/Jwrightmcps/raspberrypi5-hoobs-v5/refs/heads/main/enable-hoobs-kiosk.sh
+wget https://raw.githubusercontent.com/Jwrightmcps/raspberrypi5-hoobs-v5/refs/heads/main/launch-chrome-on-screen-keyboard.sh
 chmod +x disable-hoobs-kiosk.sh
 chmod +x enable-hoobs-kiosk.sh
+chmod +x launch-chrome-on-screen-keyboard.sh
 tar -xf on-screen-keyboard-ext.tar.gz
 
 if grep -Fxq "[idle]" ~/.config/wayfire.ini; then
