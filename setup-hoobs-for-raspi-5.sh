@@ -76,12 +76,12 @@ wget https://raw.githubusercontent.com/Jwrightmcps/raspberrypi5-hoobs-v5/refs/he
 wget https://raw.githubusercontent.com/Jwrightmcps/raspberrypi5-hoobs-v5/refs/heads/main/wf-panel-pi.ini -O ~/.config/wf-panel-pi.ini
 wget https://raw.githubusercontent.com/Jwrightmcps/raspberrypi5-hoobs-v5/refs/heads/main/desktop-items-HDMI-A-1.conf -O ~/.config/pcmanfm/LXDE-pi/desktop-items-HDMI-A-1.conf
 wget https://github.com/Jwrightmcps/raspberrypi5-hoobs-v5/raw/refs/heads/main/on-screen-keyboard-ext.tar.gz
-wget https://raw.githubusercontent.com/Jwrightmcps/raspberrypi5-hoobs-v5/refs/heads/main/disable-hoobs-kiosk.sh
-wget https://raw.githubusercontent.com/Jwrightmcps/raspberrypi5-hoobs-v5/refs/heads/main/enable-hoobs-kiosk.sh
-wget https://raw.githubusercontent.com/Jwrightmcps/raspberrypi5-hoobs-v5/refs/heads/main/launch-chrome-on-screen-keyboard.sh
-chmod +x disable-hoobs-kiosk.sh
-chmod +x enable-hoobs-kiosk.sh
-chmod +x launch-chrome-on-screen-keyboard.sh
+wget https://raw.githubusercontent.com/Jwrightmcps/raspberrypi5-hoobs-v5/refs/heads/main/chrome-on-screen-keyboard.sh
+sudo wget https://raw.githubusercontent.com/Jwrightmcps/raspberrypi5-hoobs-v5/refs/heads/main/enable-hoobs-kiosk -O /usr/bin/enable-hoobs-kiosk
+sudo wget https://raw.githubusercontent.com/Jwrightmcps/raspberrypi5-hoobs-v5/refs/heads/main/disable-hoobs-kiosk -O /usr/bin/disable-hoobs-kiosk
+sudo chmod +x /usr/bin/enable-hoobs-kiosk
+sudo chmod +x /usr/bin/disable-hoobs-kiosk
+chmod +x chrome-on-screen-keyboard.sh
 tar -xf on-screen-keyboard-ext.tar.gz
 mv gkiknnlmdgcmhmncldcmmnhhdiakielc .gkiknnlmdgcmhmncldcmmnhhdiakielc
 # Fix-up for screen blanking
