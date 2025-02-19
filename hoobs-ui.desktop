@@ -4,8 +4,6 @@
 [Desktop Entry]
 Name=Hoobs UI
 Comment=Launch Hoobs WebUI
-
 Exec=chromium-browser --load-extension=~/.gkiknnlmdgcmhmncldcmmnhhdiakielc/1.2.9.8_0/ http://hoobs.local
-#Exec=chromium-browser --noerrdialogs --disable-infobars --kiosk --load-extension=~/.gkiknnlmdgcmhmncldcmmnhhdiakielc/1.2.9.8_0/ --wayland-text-input-version=3 --enable-wayland-ime --enable-virtual-keyboard http://hoobs.local
 Type=Application
 #############################################################################################################################################
