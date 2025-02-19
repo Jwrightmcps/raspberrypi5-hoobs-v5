@@ -15,7 +15,7 @@ sudo rpi-eeprom-update
 # Get the Raspberry Pi Board Type (4 = pi4, 5 = pi5, etc.)
 sudo raspi-config nonint get_pi_type 
 # Disable splash on boot
-sudo raspi-config nonint do_boot_splash 1
+sudo raspi-config nonint do_boot_splash 0
 # Set locale to en-US
 sudo raspi-config nonint do_change_locale en_US.UTF-8
 # Set keyboard to en-US
