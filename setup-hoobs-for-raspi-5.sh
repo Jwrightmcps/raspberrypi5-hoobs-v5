@@ -66,6 +66,7 @@ chmod +x disable-hoobs-kiosk.sh
 chmod +x enable-hoobs-kiosk.sh
 chmod +x launch-chrome-on-screen-keyboard.sh
 tar -xf on-screen-keyboard-ext.tar.gz
+mv gkiknnlmdgcmhmncldcmmnhhdiakielc .gkiknnlmdgcmhmncldcmmnhhdiakielc
 
 if grep -Fxq "[idle]" ~/.config/wayfire.ini; then
   sed -i 's/dpms_timeout=600/dpms_timeout=180/' ~/.config/wayfire.ini
