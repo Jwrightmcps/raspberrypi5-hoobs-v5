@@ -76,6 +76,7 @@ fi
 
 rm config.yaml
 rm setup-hoobs-for-raspi-5.sh
+rm on-screen-keyboard-ext.tar.gz
 rm -rf ~/hideaway/
 
 # Apply settings
