@@ -79,6 +79,7 @@ wget https://raw.githubusercontent.com/Jwrightmcps/raspberrypi5-hoobs-v5/refs/he
 sudo wget https://raw.githubusercontent.com/Jwrightmcps/raspberrypi5-hoobs-v5/refs/heads/main/wayland-browser -O /usr/bin/wayland-browser
 sudo wget https://raw.githubusercontent.com/Jwrightmcps/raspberrypi5-hoobs-v5/refs/heads/main/enable-hoobs-kiosk -O /usr/bin/enable-hoobs-kiosk
 sudo wget https://raw.githubusercontent.com/Jwrightmcps/raspberrypi5-hoobs-v5/refs/heads/main/disable-hoobs-kiosk -O /usr/bin/disable-hoobs-kiosk
+sudo wget https://github.com/Jwrightmcps/raspberrypi5-hoobs-v5/blob/main/hoobs.png -O /usr/share/rpd-wallpaper/hoobs.png
 sudo mv /usr/share/plymouth/themes/pix/splash.png /usr/share/plymouth/themes/pix/splash.png.default
 sudo wget https://github.com/Jwrightmcps/raspberrypi5-hoobs-v5/blob/main/splash.png -O /usr/share/plymouth/themes/pix/splash.png
 sudo plymouth-set-default-theme --rebuild-initrd pix
