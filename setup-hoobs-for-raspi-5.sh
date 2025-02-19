@@ -2,11 +2,21 @@
 # Custom setup for RaspberryPi 5 Hoobs Server with Desktop support
  #wget https://raw.githubusercontent.com/Jwrightmcps/raspberrypi5-hoobs-v5/refs/heads/main/setup-hoobs-for-raspi-5.sh && chmod +x setup-hoobs-for-raspi-5.sh && ./setup-hoobs-for-raspi-5.sh 2>&1 | tee setup-hoobs-for-raspi-5.log
 
+if [ "$(grep LANG=en_US /etc/default/locale)" = "LANG=en_US" ];then
+	exit 0
+    else
+	sudo sh -c 'echo "LANG=en_US.UTF-8\nLANGUAGE=en_US.UTF-8\nLC_ALL=en_US.UTF-8" > /etc/default/locale'
+fi
+
 sudo apt update && sudo apt upgrade -y
 sudo rpi-eeprom-update
 
 # Get the Raspberry Pi Board Type (4 = pi4, 5 = pi5, etc.)
 sudo raspi-config nonint get_pi_type 
+# Set locale to en-US
+sudo raspi-config nonint do_change_locale en_US.UTF-8
+# Set keyboard to en-US
+sudo raspi-config nonint do_configure_keyboard
 # Set Boot to GUI and Autologon
 sudo raspi-config nonint do_boot_behaviour B4
 # Set hostname to hoobs
