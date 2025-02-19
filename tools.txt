@@ -23,4 +23,7 @@ sudo apt install rpi-imager
 
 # Configure clock (%I%M%p)
 
+Exec=chromium-browser --wayland-text-input-version=3 --enable-wayland-ime --enable-virtual-keyboard --load-extension=~/gkiknnlmdgcmhmncldcmmnhhdiakielc/1.2.9.8_0/ http://www.google.com/
+
+
 https://www.raspberrypi.com/documentation/computers/configuration.html#advanced-options
