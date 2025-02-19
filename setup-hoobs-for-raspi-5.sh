@@ -1,6 +1,6 @@
 #!/bin/bash
 # Custom setup for RaspberryPi 5 Hoobs Server with Desktop support
-# wget https://raw.githubusercontent.com/Jwrightmcps/raspberrypi5-hoobs-v5/refs/heads/main/setup-hoobs-for-raspi-5.sh && chmod +x setup-hoobs-for-raspi-5.sh && ./setup-hoobs-for-raspi-5.sh
+ #wget https://raw.githubusercontent.com/Jwrightmcps/raspberrypi5-hoobs-v5/refs/heads/main/setup-hoobs-for-raspi-5.sh && chmod +x setup-hoobs-for-raspi-5.sh && ./setup-hoobs-for-raspi-5.sh 2>&1 | tee setup-hoobs-for-raspi-5.log
 
 sudo apt update && sudo apt upgrade -y
 sudo rpi-eeprom-update
@@ -84,4 +84,6 @@ rm -rf ~/hideaway/
 
 # Apply settings
 sudo raspi-config nonint do_finish
-printf "%s\n" "Please reboot system for all changes to take effect"
+printf "%s\n" "Rebooting system for all changes to take effect"
+
+sudo reboot
