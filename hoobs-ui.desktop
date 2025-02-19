@@ -5,8 +5,8 @@
 Name=Hoobs UI
 Comment=Launch Hoobs WebUI
 
-Exec=chromium-browser --wayland-text-input-version=3 --enable-wayland-ime --enable-virtual-keyboard http://www.google.com/
-#Exec=chromium-browser --noerrdialogs --disable-infobars --start-fullscreen --load-extension=~/.config/chromium/Default/Extensions/gkiknnlmdgcmhmncldcmmnhhdiakielc/1.2.9.8_0/ --wayland-text-input-version=3 --enable-wayland-ime --enable-virtual-keyboard http://hoobs.local
+Exec=chromium-browser --wayland-text-input-version=3 --enable-wayland-ime --enable-virtual-keyboard --load-extension=~/gkiknnlmdgcmhmncldcmmnhhdiakielc/1.2.9.8_0/ http://www.google.com/
+#Exec=chromium-browser --noerrdialogs --disable-infobars --start-fullscreen --load-extension=~/gkiknnlmdgcmhmncldcmmnhhdiakielc/1.2.9.8_0/ --wayland-text-input-version=3 --enable-wayland-ime --enable-virtual-keyboard http://hoobs.local
 #Exec=chromium-browser --noerrdialogs --disable-infobars --kiosk --load-extension=~/gkiknnlmdgcmhmncldcmmnhhdiakielc/1.2.9.8_0/ --wayland-text-input-version=3 --enable-wayland-ime --enable-virtual-keyboard http://hoobs.local
 Type=Application
 #############################################################################################################################################
