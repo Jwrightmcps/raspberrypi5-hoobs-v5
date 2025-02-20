@@ -30,3 +30,10 @@ https://www.raspberrypi.com/documentation/computers/configuration.html#advanced-
 Configuration - Raspberry Pi Documentation
 The official documentation for Raspberry Pi computers and microcontrollers.
 https://www.raspberrypi.com/documentation/computers/configuration.html
+
+
+https://forums.raspberrypi.com/viewtopic.php?t=307644
+https://wiki.debian.org/plymouth
+https://forums.raspberrypi.com/viewtopic.php?t=371934
+https://forums.raspberrypi.com/viewtopic.php?t=357885
+https://community.toradex.com/t/issues-adding-custom-splash-screen-using-plymouth/20359/5
