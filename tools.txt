@@ -37,3 +37,7 @@ https://wiki.debian.org/plymouth
 https://forums.raspberrypi.com/viewtopic.php?t=371934
 https://forums.raspberrypi.com/viewtopic.php?t=357885
 https://community.toradex.com/t/issues-adding-custom-splash-screen-using-plymouth/20359/5
+
+
+https://forums.raspberrypi.com/viewtopic.php?p=2048091#p2034260
+https://www.raspberrypi.com/documentation/computers/config_txt.html
