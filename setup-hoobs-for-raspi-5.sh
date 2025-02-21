@@ -69,6 +69,7 @@ echo "'$default_user' user account already exists, skipping"
 else
 echo "$default_user' user account not found, creating account..."
 sudo adduser --quiet --disabled-password --comment "" $default_user
+chpasswd <<<"$default_user:$default_pass"
 sudo adduser --quiet $default_user sudo
 fi
 # Create autostart directory
