@@ -61,7 +61,7 @@ sudo apt install hoobsd hoobs-cli -y
 # Install Hoobs Hub
 sudo hbs install -p 80
 # Create default hoobs user account and add to sudo group
-default_user=hoobs99
+default_user=hoobs
 default_pass=hoobsadmin
 # Check if account already exists
 if [ "$(awk -F: '{ print $1}' /etc/passwd | grep -w "$default_user")" ]; then
