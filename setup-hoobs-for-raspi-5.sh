@@ -60,6 +60,17 @@ wget -qO- https://dl.hoobs.org/stable | sudo bash -
 sudo apt install hoobsd hoobs-cli -y
 # Install Hoobs Hub
 sudo hbs install -p 80
+# Create default hoobs user account and add to sudo group
+default_user=hoobs99
+default_pass=hoobsadmin
+# Check if account already exists
+if [ "$(awk -F: '{ print $1}' /etc/passwd | grep -w "$default_user")" ]; then
+echo "'$default_user' user account already exists, skipping"
+else
+echo "$default_user' user account not found, creating account..."
+sudo adduser --quiet --disabled-password --comment "" $default_user
+sudo adduser --quiet $default_user sudo    
+fi
 # Create autostart directory
 if [ ! -d ~/.config/autostart ]; then
 mkdir ~/.config/autostart
