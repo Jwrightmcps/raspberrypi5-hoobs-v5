@@ -103,6 +103,8 @@ sudo mv splash.png /usr/share/plymouth/themes/pix/splash.png
 sudo mv hoobs.png /usr/share/rpd-wallpaper/hoobs.png
 sudo plymouth-set-default-theme -R pix
 mv gkiknnlmdgcmhmncldcmmnhhdiakielc .gkiknnlmdgcmhmncldcmmnhhdiakielc
+# Fix-up desktop items file for user desktop folder
+printf "%s\n" "/home/$USER/Desktop" >> ~/.config/pcmanfm/LXDE-pi/desktop-items-HDMI-A-1.conf
 # Fix-up for screen blanking
 if grep -Fxq "[idle]" ~/.config/wayfire.ini; then
   sed -i 's/dpms_timeout=600/dpms_timeout=180/' ~/.config/wayfire.ini
